@@ -1,0 +1,124 @@
+# Sensative – AI Policy
+
+**Version:** 1.4 (draft 2026-05-05)
+**Owner:** CISO/CTO
+**Applies to:** All employees, consultants and partners who use or integrate AI, GPT models or agents in Sensative's operations.
+
+**Only the AI tools (Claude etc) provided under the Anthropic Team License (Sensative AB subscription) are allowed to be used.**
+
+---
+
+## 1. Purpose
+
+Enable rapid innovation, productivity and technical development with AI, GPT models and agents without compromising security, privacy, compliance or customer trust. The policy provides employees with clear guidance on what is permitted, what requires approval, and what is prohibited – so that everyone can use AI safely and effectively in their daily work.
+
+## 2. Scope and Sensative's position on AI
+
+This policy applies to both the use of external AI services and the integration of AI-based functionality into our products, in all environments: product development (Yggio and embedded), support, sales, marketing, operations, HR and internal administration.
+
+## 3. Principles
+
+- **Security first:** No innovation may compromise data protection or compliance.
+- **Human in the loop:** AI assists; humans are accountable for decisions, quality and delivery.
+- **Minimum necessary data:** Never share more data than required for the task.
+- **Traceability:** Every use and integration of AI must be explainable and auditable.
+- **Innovation:** Experimentation is encouraged in controlled environments.
+- **Vendor reliance is a risk we manage:** Since we rely on third-party models, we actively manage vendor, contract and continuity risk.
+
+## 4. Roles and responsibilities
+
+- **Board/CEO:** Sets risk appetite and approves the policy.
+- **CTO:** Owns the policy, risk-classifies use cases and handles incidents.
+- **Security and AI Architect:** Approves AI tools, models, agents and integrations; maintains the list of approved tools and vendors.
+- **CEO/Legal:** Ensures GDPR, contractual and IP compliance; supports customer agreements concerning AI; reviews vendor contracts and DPAs.
+- **Product and engineering leads:** Ensure that AI use within product teams complies with the policy; approve medium-risk use cases.
+- **All users:** Comply with the policy, document use where required, and report deviations and incidents.
+
+## 5. Data classification
+
+- **C4 – Strictly confidential:** Customer data and personal data (in particular GDPR Art. 9 categories), security keys, API keys and authentication tokens, IoT telemetry attributable to an end customer, and production source code containing business-critical algorithms, security logic or hard-coded secrets. Must never be shared with, or used for training by, an external provider.
+- **C3 – Confidential:** Internal business information, unpublished product code, architecture descriptions, commercial terms. Permitted only in approved tools under contracts that guarantee data is not used for training.
+- **C2 – Internal:** General internal information, documentation, generic code and configuration without secrets. May be used in approved tools.
+- **C1 – Public:** Material intended for publication. Free to use.
+
+## 6. Permitted and prohibited uses
+
+### Permitted (examples)
+
+- Code assistance, refactoring and test generation at C2–C3 level in approved environments.
+- Summarization and analysis of public or C2 documents.
+- Research and prototyping using synthetic or anonymized data.
+- Reviewing public documentation and standards (e.g. LwM2M, MQTT, BLE, NB-IoT).
+- Generating example code and debugging assistance for embedded toolchains, provided that internal firmware code is not shared.
+- Building RAG and prompt-based features on top of approved vendor models, where the vendor model itself is not modified.
+
+### Prohibited
+
+- Uploading C4 data or customer data to external AI services or training environments.
+- Publishing AI-generated content without human review.
+- Developing agents with autonomous access to production systems without approval.
+- Using AI to make decisions about individuals (recruitment, salary, performance, access).
+- Using non-approved AI tools for work tasks.
+
+## 7. Tools, models and providers
+
+All models used by Sensative are operated by external providers. Vendor selection and contract terms are therefore a primary control.
+
+- Only approved AI services, models and libraries may be used. The current list is maintained by the Security and AI Architect.
+- **Provider requirements:** data residency in the EU or an approved jurisdiction, encryption at rest and in transit, opt-out from training on customer data, clear logging and deletion procedures, and a DPA where personal data may be processed.
+- **Enterprise licenses:** Always use the company license rather than personal accounts for work purposes.
+- Personal accounts in AI services may not be used.
+- **Vendor continuity:** For AI capabilities embedded in Yggio or embedded products, evaluate model portability and have a documented fallback in case a provider becomes unavailable or changes terms.
+
+### Requirements per class
+
+- **Low:** briefly documented, peer reviewed.
+- **Medium:** risk analysis, sandbox testing, approval by manager or product lead.
+- **High:** DPIA, CISO/Legal approval, controlled pilot, documented sunset plan.
+
+## 8. Intellectual property and licenses
+
+- **AI-generated content in products:** Before AI-generated code, text or images are incorporated into a product or public material, copyright, license terms and any third-party contributions must be reviewed.
+- **Customer data and IP:** Customer data belongs to the customer. AI use must not result in customer data being mixed with data from other customers or trained into shared models.
+- **Open-source contributions:** AI-generated code intended to be contributed to open-source projects is reviewed with particular attention to licensing and provenance.
+
+## 9. Incidents, training and awareness
+
+### Incident handling
+
+- Suspected data leakage, prompt injection, hallucinations leading to incorrect decisions, or any other AI-related incident must be reported promptly to the CTO/CISO via the regular incident channel.
+- Incidents are triaged according to the existing incident process; AI incidents are logged separately for follow-up and learning.
+
+### Training and awareness
+
+- All employees go through a brief introduction to the AI policy and safe AI use during onboarding and after major policy revisions.
+- Domain specific governing document (e.g software development) guidelines must be followed if such a document exists for your domain.
+- Manager of each team is responsible for making sure that the team has the relevant information and training.
+- Development teams receive deeper training in AI-assisted code development, prompt injection and the safe use of agents.
+- The Security and AI Architect publishes ongoing examples, lessons learned and updates to the approved tool list.
+
+## 10. Review and follow-up
+
+- The policy is reviewed quarterly.
+- **Key metrics:** usage per approved tool, incidents (including hallucination and prompt-injection incidents), customer-impacting errors, share of AI-generated code passing through code review, accuracy/model quality of integrated vendor models, and tracked benefits (cycle time, deploy frequency).
+- High-risk use cases, agents and any exception-approved fine-tuning are audited every six months; the approved tool list and logs are subject to ongoing light supervision.
+
+## 11. Exceptions
+
+- Exceptions are granted by the CISO in consultation with Legal. They are time-limited and documented.
+- Exceptions are recorded in an exceptions register including justification, time period, risk assessment and compensating controls.
+- **In particular:** any proposal to train or fine-tune a model on Sensative or customer data is treated as a high-risk exception, requires a DPIA, written CISO and Legal approval, and is reported to the CEO.
+
+---
+
+## Appendix A – Quick guide for employees
+
+Before pasting anything into an AI service, ask yourself:
+
+1. Is this tool approved for what I am doing?
+2. What classification (C1–C4) does the information I am sharing have?
+3. Would I be comfortable if a customer saw this exchange?
+4. Have I reviewed what I intend to use from the AI?
+5. Who is accountable for the final result? (Answer: I am.)
+
+When in doubt, ask your manager or the Security and AI Architect.
