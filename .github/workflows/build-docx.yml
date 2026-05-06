@@ -1,0 +1,31 @@
+name: Build policy docs
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install pandoc
+        run: sudo apt-get update && sudo apt-get install -y pandoc
+
+      - name: Convert markdown to docx
+        run: |
+          mkdir -p out
+          TAG="${GITHUB_REF_NAME}"
+          pandoc policy.md             -o "out/policy-${TAG}.docx"
+          pandoc policy-development.md -o "out/policy-development-${TAG}.docx"
+
+      - name: Create release with docx files
+        uses: softprops/action-gh-release@v2
+        with:
+          files: out/*.docx
+          generate_release_notes: true
