@@ -14,6 +14,8 @@ Enable rapid innovation, productivity and technical development with AI, GPT mod
 
 ## 2. Scope and Sensative's position on AI
 
+Sensative is committed to using AI to accelerate our work and our products, while keeping customer trust and data protection non-negotiable. We adopt AI through enterprise vendors under approved contracts, treat external models as a managed dependency rather than infrastructure we control, and keep humans accountable for everything we publish or ship.
+
 This policy applies to both the use of external AI services and the integration of AI-based functionality into our products, in all environments: product development (Yggio and embedded), support, sales, marketing, operations, HR and internal administration.
 
 ### Definitions
@@ -43,7 +45,7 @@ This policy applies to both the use of external AI services and the integration 
 
 ## 5. Data classification
 
-- **C4 – Strictly confidential:** Customer data and personal data (in particular GDPR Art. 9 categories), security keys, API keys and authentication tokens, IoT telemetry attributable to an end customer, and sensor firmware source code. Must never be shared with, or used for training by, an external provider.
+- **C4 – Strictly confidential:** Customer data, personal data of customers or other external data subjects (in particular GDPR Art. 9 categories), security keys, API keys and authentication tokens, IoT telemetry attributable to an end customer, and sensor firmware source code. Must never be shared with, or used for training by, an external provider. *Internal personal data (employee names, work email, calendar entries, internal HR communications) is handled under normal confidentiality practice; it does not automatically fall into C4 but must not be used outside approved tools or shared with parties that lack an appropriate basis under GDPR.*
 - **C3 – Confidential:** Internal business information, unpublished product code, architecture descriptions, commercial terms. Permitted only in approved tools under contracts that guarantee data is not used for training.
 - **C2 – Internal:** General internal information, documentation, generic code and configuration without secrets. May be used in approved tools.
 - **C1 – Public:** Material intended for publication. Free to use.
@@ -78,7 +80,7 @@ The following AI services are currently approved for use under company license:
 - **Claude** — Anthropic Team License (Sensative AB subscription). General-purpose AI assistant; permitted for C1–C3 data subject to §5–§6.
 - **Microsoft 365** — Sensative AB tenant, including Copilot features where the user is licensed. Permitted for C1–C3 data within the tenant; outputs that leave the tenant follow the same rules as any external AI service.
 
-This list is a snapshot. The authoritative, up-to-date list is maintained by the Security and AI Architect on the internal AI Tools register. Additional tools must be approved before use (see below).
+This list is a snapshot. The authoritative, up-to-date list will be maintained by the Security and AI Architect on the internal AI Tools register as that register is established; until then, the snapshot above and direct approval by the Security and AI Architect are authoritative. Additional tools must be approved before use (see below).
 
 ### General rules
 
@@ -120,7 +122,7 @@ Each AI use case is classified by the likely impact if it fails (data exposure, 
 
 ### Training and awareness
 
-- All employees go through a brief introduction to the AI policy and safe AI use during onboarding and after major policy revisions.
+- All employees will be given a brief introduction to the AI policy and safe AI use as part of onboarding and after major policy revisions; this is being rolled out and will become a standing part of onboarding.
 - Domain specific governing document (e.g software development) guidelines must be followed if such a document exists for your domain.
 - Manager of each team is responsible for making sure that the team has the relevant information and training.
 - Development teams receive deeper training in AI-assisted code development, prompt injection and the safe use of agents.
