@@ -4,7 +4,7 @@
 **Owner:** CISO/CTO
 **Applies to:** All employees, consultants and partners who use or integrate AI, GPT models or agents in Sensative's operations.
 
-**Only the AI tools (Claude etc) provided under the Anthropic Team License (Sensative AB subscription) are allowed to be used.**
+**Currently, the only approved general-purpose AI service is Claude, provided under the Anthropic Team License (Sensative AB subscription). Additional AI tools may be approved as described in §7.**
 
 ---
 
@@ -16,6 +16,12 @@ Enable rapid innovation, productivity and technical development with AI, GPT mod
 
 This policy applies to both the use of external AI services and the integration of AI-based functionality into our products, in all environments: product development (Yggio and embedded), support, sales, marketing, operations, HR and internal administration.
 
+### Definitions
+
+- **Agent:** An AI system that can take actions across multiple steps (write files, call APIs, execute code, send messages, modify systems) without per-step human approval. A chat assistant that only generates text in response to prompts is not an agent.
+- **Approved tool:** An AI service, model or library on the current approved list maintained by the Security and AI Architect (see §7).
+- **AI feature:** AI-driven functionality embedded in another product (e.g., Notion AI, GitHub Copilot Chat, Slack AI, meeting summarization in Zoom/Teams). AI features are in scope and require the same approval as standalone AI tools.
+
 ## 3. Principles
 
 - **Security first:** No innovation may compromise data protection or compliance.
@@ -23,12 +29,13 @@ This policy applies to both the use of external AI services and the integration 
 - **Minimum necessary data:** Never share more data than required for the task.
 - **Traceability:** Every use and integration of AI must be explainable and auditable.
 - **Innovation:** Experimentation is encouraged in controlled environments.
+- **Regulatory alignment:** Use of AI complies with the EU AI Act, GDPR and other applicable regulations. Practices prohibited under EU AI Act Art. 5 are off-limits regardless of any other approval.
 - **Vendor reliance is a risk we manage:** Since we rely on third-party models, we actively manage vendor, contract and continuity risk.
 
 ## 4. Roles and responsibilities
 
 - **Board/CEO:** Sets risk appetite and approves the policy.
-- **CTO:** Owns the policy, risk-classifies use cases and handles incidents.
+- **CTO/CISO:** Owns the policy, risk-classifies use cases and handles incidents.
 - **Security and AI Architect:** Approves AI tools, models, agents and integrations; maintains the list of approved tools and vendors.
 - **CEO/Legal:** Ensures GDPR, contractual and IP compliance; supports customer agreements concerning AI; reviews vendor contracts and DPAs.
 - **Product and engineering leads:** Ensure that AI use within product teams complies with the policy; approve medium-risk use cases.
@@ -57,30 +64,41 @@ This policy applies to both the use of external AI services and the integration 
 - Uploading C4 data or customer data to external AI services or training environments.
 - Publishing AI-generated content without human review.
 - Developing agents with autonomous access to production systems without approval.
-- Using AI to make decisions about individuals (recruitment, salary, performance, access).
+- Using AI as the deciding factor for decisions about individuals (recruitment, salary, performance, access). AI-assisted analysis is permitted when a human makes and is accountable for the final decision.
 - Using non-approved AI tools for work tasks.
 
 ## 7. Tools, models and providers
 
 All models used by Sensative are operated by external providers. Vendor selection and contract terms are therefore a primary control.
 
-- Only approved AI services, models and libraries may be used. The current list is maintained by the Security and AI Architect.
+- Only approved AI services, models and libraries may be used. The current list is maintained by the Security and AI Architect and published on the internal AI Tools register.
+- **AI features in third-party tools** (e.g., Notion AI, GitHub Copilot Chat, Slack AI, meeting summarization in Zoom/Teams, M365 Copilot) are in scope and follow the same approval process. Disable by default until reviewed.
 - **Provider requirements:** data residency in the EU or an approved jurisdiction, encryption at rest and in transit, opt-out from training on customer data, clear logging and deletion procedures, and a DPA where personal data may be processed.
 - **Enterprise licenses:** Always use the company license rather than personal accounts for work purposes.
 - Personal accounts in AI services may not be used.
 - **Vendor continuity:** For AI capabilities embedded in Yggio or embedded products, evaluate model portability and have a documented fallback in case a provider becomes unavailable or changes terms.
+- **Logging and retention:** Where approved tools provide audit logs of prompts and outputs, those logs are retained according to the standard incident-and-audit retention schedule. Prompts inherit the classification of the data they contain (see §5).
+
+### Risk classes
+
+Each AI use case is classified by the likely impact if it fails (data exposure, incorrect output reaching customers, regulatory issue, operational disruption):
+
+- **Low:** Internal productivity use of approved tools on C1–C2 data (drafting, summarization, code search). No customer impact if the output is wrong; reversible.
+- **Medium:** Use of C3 data in approved tools, AI features integrated into internal workflows, or prototypes on synthetic or anonymized customer-shaped data. Errors could cause limited internal impact or require rework.
+- **High:** AI in customer-facing products, agents acting on production systems, processing of C4 data (only via documented exception), or use cases falling under EU AI Act high-risk categories. Errors could cause customer harm, regulatory exposure or material business impact.
 
 ### Requirements per class
 
 - **Low:** briefly documented, peer reviewed.
 - **Medium:** risk analysis, sandbox testing, approval by manager or product lead.
-- **High:** DPIA, CISO/Legal approval, controlled pilot, documented sunset plan.
+- **High:** DPIA, CTO/CISO and Legal approval, controlled pilot, documented sunset plan.
 
 ## 8. Intellectual property and licenses
 
 - **AI-generated content in products:** Before AI-generated code, text or images are incorporated into a product or public material, copyright, license terms and any third-party contributions must be reviewed.
 - **Customer data and IP:** Customer data belongs to the customer. AI use must not result in customer data being mixed with data from other customers or trained into shared models.
 - **Open-source contributions:** AI-generated code intended to be contributed to open-source projects is reviewed with particular attention to licensing and provenance.
+- **Customer-facing transparency:** When customers or end users interact with AI we operate, or see AI-generated content as part of our products or communications, this is disclosed in line with EU AI Act Art. 50 and any contractual commitments. Sales, support and product teams are responsible for ensuring this disclosure where applicable.
 
 ## 9. Incidents, training and awareness
 
@@ -105,9 +123,9 @@ All models used by Sensative are operated by external providers. Vendor selectio
 
 ## 11. Exceptions
 
-- Exceptions are granted by the CISO in consultation with Legal. They are time-limited and documented.
-- Exceptions are recorded in an exceptions register including justification, time period, risk assessment and compensating controls.
-- **In particular:** any proposal to train or fine-tune a model on Sensative or customer data is treated as a high-risk exception, requires a DPIA, written CISO and Legal approval, and is reported to the CEO.
+- Exceptions are granted by the CTO/CISO in consultation with Legal. They are time-limited and documented.
+- Exceptions are recorded in an exceptions register (maintained by the Security and AI Architect) including justification, time period, risk assessment and compensating controls.
+- **In particular:** any proposal to train or fine-tune a model on Sensative or customer data is treated as a high-risk exception, requires a DPIA, written CTO/CISO and Legal approval, and is reported to the CEO.
 
 ---
 
