@@ -66,8 +66,22 @@ This policy applies to both the use of external AI services and the integration 
 - Uploading C4 data or customer data to external AI services or training environments.
 - Publishing AI-generated content without human review.
 - Developing agents with autonomous access to production systems without approval.
-- Using AI as the deciding factor for decisions about individuals (recruitment, salary, performance, access). AI-assisted analysis is permitted when a human makes and is accountable for the final decision.
 - Using non-approved AI tools for work tasks.
+
+### Decisions about individuals
+
+AI must not be the deciding factor in decisions about identified individuals — recruitment, salary, performance, role assignment, account offboarding, or support escalation involving named end users. This is the EU AI Act high-risk category for employment AI; we apply the same line more broadly to anyone we make decisions about.
+
+AI-assisted *analysis* is permitted when all of the following hold:
+
+- A named human makes the final decision and is accountable for it.
+- The reviewer evaluates the underlying facts, not only the AI's summary or recommendation.
+- The use is documented: which tool, what the AI was asked, what the human concluded.
+- Affected individuals are informed where GDPR, the EU AI Act or a contract requires it.
+
+*Permitted, for example:* summarising a CV that a recruiter then reads in full; clustering support tickets to spot patterns; drafting written feedback that a manager edits and signs.
+
+*Prohibited, for example:* ranking candidates by an AI score that drives the shortlist; flagging customer accounts for offboarding from an AI signal alone; generating performance ratings.
 
 ## 7. Tools, models and providers
 
