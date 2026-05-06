@@ -4,7 +4,7 @@
 **Owner:** CISO/CTO
 **Applies to:** All employees, consultants and partners who use or integrate AI, GPT models or agents in Sensative's operations.
 
-**Currently, the only approved general-purpose AI service is Claude, provided under the Anthropic Team License (Sensative AB subscription). Additional AI tools may be approved as described in §7.**
+**Use only AI services approved by Sensative under company license — never personal accounts. The currently approved services and the approval process for additions are listed in §7.**
 
 ---
 
@@ -71,8 +71,19 @@ This policy applies to both the use of external AI services and the integration 
 
 All models used by Sensative are operated by external providers. Vendor selection and contract terms are therefore a primary control.
 
-- Only approved AI services, models and libraries may be used. The current list is maintained by the Security and AI Architect and published on the internal AI Tools register.
-- **AI features in third-party tools** (e.g., Notion AI, GitHub Copilot Chat, Slack AI, meeting summarization in Zoom/Teams, M365 Copilot) are in scope and follow the same approval process. Disable by default until reviewed.
+### Approved services
+
+The following AI services are currently approved for use under company license:
+
+- **Claude** — Anthropic Team License (Sensative AB subscription). General-purpose AI assistant; permitted for C1–C3 data subject to §5–§6.
+- **Microsoft 365** — Sensative AB tenant, including Copilot features where the user is licensed. Permitted for C1–C3 data within the tenant; outputs that leave the tenant follow the same rules as any external AI service.
+
+This list is a snapshot. The authoritative, up-to-date list is maintained by the Security and AI Architect on the internal AI Tools register. Additional tools must be approved before use (see below).
+
+### General rules
+
+- Only approved AI services, models and libraries may be used (see *Approved services* above). Additional tools require Security and AI Architect approval before use.
+- **AI features in third-party tools** (e.g., Notion AI, GitHub Copilot Chat, Slack AI, meeting summarization in Zoom/Teams) are in scope and follow the same approval process. Disable by default until reviewed.
 - **Provider requirements:** data residency in the EU or an approved jurisdiction, encryption at rest and in transit, opt-out from training on customer data, clear logging and deletion procedures, and a DPA where personal data may be processed.
 - **Enterprise licenses:** Always use the company license rather than personal accounts for work purposes.
 - Personal accounts in AI services may not be used.
