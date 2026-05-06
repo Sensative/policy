@@ -1,6 +1,6 @@
 # Sensative – AI Coding Assistants Policy (Development & R&D)
 
-**Version:** 1.0 (draft 2026-05-05)
+**Version:** {{VERSION}} ({{DATE}})
 **Owner:** CTO
 **Applies to:** All developers, R&D engineers, ML and firmware engineers contributing code, scripts, configuration or models at Sensative.
 **Companion to:** the Sensative AI Policy (`policy.md`) — read that first. This document makes the dev-time rules concrete; it does not override the parent policy.

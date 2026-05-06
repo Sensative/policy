@@ -1,6 +1,6 @@
 # Sensative – AI Policy
 
-**Version:** 1.4 (draft 2026-05-05)
+**Version:** {{VERSION}} ({{DATE}})
 **Owner:** CISO/CTO
 **Applies to:** All employees, consultants and partners who use or integrate AI, GPT models or agents in Sensative's operations.
 

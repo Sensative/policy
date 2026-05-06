@@ -13,16 +13,23 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Install pandoc
         run: sudo apt-get update && sudo apt-get install -y pandoc
 
       - name: Convert markdown to docx
         run: |
-          mkdir -p out
+          mkdir -p out build
           TAG="${GITHUB_REF_NAME}"
-          pandoc policy.md             -o "out/policy-${TAG}.docx"
-          pandoc policy-development.md -o "out/policy-development-${TAG}.docx"
+          VERSION="${TAG#v}"
+          DATE="$(git for-each-ref --format='%(creatordate:short)' "refs/tags/${TAG}")"
+          for src in policy.md policy-development.md; do
+            sed -e "s/{{VERSION}}/${VERSION}/g" -e "s/{{DATE}}/${DATE}/g" "$src" > "build/$src"
+          done
+          pandoc build/policy.md             -o "out/policy-${TAG}.docx"
+          pandoc build/policy-development.md -o "out/policy-development-${TAG}.docx"
 
       - name: Create release with docx files
         uses: softprops/action-gh-release@v2
