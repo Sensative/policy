@@ -79,6 +79,7 @@ The following AI services are currently approved for use under company license:
 
 - **Claude** — Anthropic Team License (Sensative AB subscription). General-purpose AI assistant; permitted for C1–C3 data subject to §5–§6.
 - **Microsoft 365** — Sensative AB tenant, including Copilot features where the user is licensed. Permitted for C1–C3 data within the tenant; outputs that leave the tenant follow the same rules as any external AI service.
+- **GitHub Copilot** — Sensative AB organisation on GitHub Enterprise Cloud, including Copilot features (code completion, chat, PR review) where the user is licensed. Permitted for C1–C3 data subject to §5–§6; engineers using Copilot for source-code work additionally follow `policy-development.md`. Customer-owned source code shared with Sensative under NDA may only be used in Copilot when the customer agreement permits it.
 
 This list is a snapshot. The authoritative, up-to-date list will be maintained by the Security and AI Architect on the internal AI Tools register as that register is established; until then, the snapshot above and direct approval by the Security and AI Architect are authoritative. Additional tools must be approved before use (see below).
 
