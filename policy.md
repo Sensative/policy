@@ -43,7 +43,7 @@ This policy applies to both the use of external AI services and the integration 
 
 ## 5. Data classification
 
-- **C4 – Strictly confidential:** Customer data and personal data (in particular GDPR Art. 9 categories), security keys, API keys and authentication tokens, IoT telemetry attributable to an end customer, and production source code containing business-critical algorithms, security logic or hard-coded secrets. Must never be shared with, or used for training by, an external provider.
+- **C4 – Strictly confidential:** Customer data and personal data (in particular GDPR Art. 9 categories), security keys, API keys and authentication tokens, IoT telemetry attributable to an end customer, and sensor firmware source code. Must never be shared with, or used for training by, an external provider.
 - **C3 – Confidential:** Internal business information, unpublished product code, architecture descriptions, commercial terms. Permitted only in approved tools under contracts that guarantee data is not used for training.
 - **C2 – Internal:** General internal information, documentation, generic code and configuration without secrets. May be used in approved tools.
 - **C1 – Public:** Material intended for publication. Free to use.

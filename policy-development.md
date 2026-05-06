@@ -19,8 +19,8 @@ See parent §7. Use only AI Assistants approved there — no personal accounts, 
 
 Apply the parent classification (parent §5) at the prompt boundary:
 
-- **C4** (customer data, personal data, secrets, API keys, security-critical algorithms): never paste.
-- **C3** (Yggio source, firmware source, architecture, commercial terms): only in approved tools whose contracts forbid training on submitted data.
+- **C4** (customer data, personal data, secrets, API keys, sensor firmware source): never paste.
+- **C3** (Yggio source, architecture, commercial terms): only in approved tools whose contracts forbid training on submitted data.
 - **C2 / C1**: fine.
 
 Share the minimum context needed. When in doubt, redact.
