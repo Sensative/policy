@@ -66,8 +66,22 @@ This policy applies to both the use of external AI services and the integration 
 - Uploading C4 data or customer data to external AI services or training environments.
 - Publishing AI-generated content without human review.
 - Developing agents with autonomous access to production systems without approval.
-- Using AI as the deciding factor for decisions about individuals (recruitment, salary, performance, access). AI-assisted analysis is permitted when a human makes and is accountable for the final decision.
 - Using non-approved AI tools for work tasks.
+
+### Decisions about individuals
+
+AI must not be the deciding factor in decisions about identified individuals — recruitment, salary, performance, role assignment, account offboarding, or support escalation involving named end users. This is the EU AI Act high-risk category for employment AI; we apply the same line more broadly to anyone we make decisions about.
+
+AI-assisted *analysis* is permitted when all of the following hold:
+
+- A named human makes the final decision and is accountable for it.
+- The reviewer evaluates the underlying facts, not only the AI's summary or recommendation.
+- The use is documented: which tool, what the AI was asked, what the human concluded.
+- Affected individuals are informed where GDPR, the EU AI Act or a contract requires it.
+
+*Permitted, for example:* summarising a CV that a recruiter then reads in full; clustering support tickets to spot patterns; drafting written feedback that a manager edits and signs.
+
+*Prohibited, for example:* ranking candidates by an AI score that drives the shortlist; flagging customer accounts for offboarding from an AI signal alone; generating performance ratings.
 
 ## 7. Tools, models and providers
 
@@ -79,6 +93,7 @@ The following AI services are currently approved for use under company license:
 
 - **Claude** — Anthropic Team License (Sensative AB subscription). General-purpose AI assistant; permitted for C1–C3 data subject to §5–§6.
 - **Microsoft 365** — Sensative AB tenant, including Copilot features where the user is licensed. Permitted for C1–C3 data within the tenant; outputs that leave the tenant follow the same rules as any external AI service.
+- **GitHub Copilot** — Sensative AB organisation on GitHub Enterprise Cloud, including Copilot features (code completion, chat, PR review) where the user is licensed. Permitted for C1–C3 data subject to §5–§6; engineers using Copilot for source-code work additionally follow `policy-development.md`.
 
 This list is a snapshot. The authoritative, up-to-date list will be maintained by the Security and AI Architect on the internal AI Tools register as that register is established; until then, the snapshot above and direct approval by the Security and AI Architect are authoritative. Additional tools must be approved before use (see below).
 
