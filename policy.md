@@ -36,7 +36,7 @@ This policy applies to both the use of external AI services and the integration 
 
 ## 4. Roles and responsibilities
 
-- **Board/CEO:** Sets risk appetite and approves the policy.
+- **Board/CEO:** Sets risk appetite and approves the policy. The CEO is Primary Owner of the company AI accounts (see *Administrator access to employee usage data*, §7).
 - **CTO/CISO:** Owns the policy, risk-classifies use cases and handles incidents.
 - **Security and AI Architect:** Approves AI tools, models, agents and integrations; maintains the list of approved tools and vendors.
 - **CEO/Legal:** Ensures GDPR, contractual and IP compliance; supports customer agreements concerning AI; reviews vendor contracts and DPAs.
@@ -107,6 +107,20 @@ This list is a snapshot. The authoritative, up-to-date list will be maintained b
 - **Vendor continuity:** For AI capabilities embedded in Yggio or embedded products, evaluate model portability and have a documented fallback in case a provider becomes unavailable or changes terms.
 - **Logging and retention:** Where approved tools provide audit logs of prompts and outputs, those logs are retained according to the standard incident-and-audit retention schedule. Prompts inherit the classification of the data they contain (see §5).
 
+### Administrator access to employee usage data
+
+Company AI accounts are company systems. Account owners and administrators can, by design, view and export any user's content — conversations, uploaded files and usage patterns. This is true of all approved services, not one of them; it is a platform capability that cannot be switched off. The rules below are an organisational commitment about when we use it, not a technical restriction.
+
+- **Default:** we don't. Administrator access to another employee's content is not used routinely, for general oversight, or out of curiosity — and never to assess individual performance or behaviour.
+- **Permitted grounds:** (a) investigation of a security incident — suspected breach, leakage or account misuse; (b) a legal obligation, such as a court order, regulatory demand or ongoing legal proceedings; (c) the employee's own request, for example to recover their own content; (d) an external audit or compliance requirement Sensative is subject to.
+- **Approval:** initiated by the CEO as Primary Owner and co-signed by the CTO/CISO. If either is the subject of the matter, the other and the Board chair approve instead. Where an identified employee is concerned, HR is informed before access unless that would compromise an ongoing security-incident investigation.
+- **Scope:** limited to the accounts, time period and content the stated ground requires (§3, minimum necessary data).
+- **Logging:** each access is recorded in the register maintained by the Security and AI Architect (§11) with date, who, which accounts, the ground and a brief justification.
+- **Handling:** exported content is handled under the standard procedures for sensitive personnel information, and deleted or archived once the stated purpose is met.
+- **Deviations:** access outside these grounds is reported under §9 and raised openly in the leadership team, not handled silently.
+
+This is processing of employee personal data — resting on legal obligation or on Sensative's legitimate interest depending on the ground — and is covered by Sensative's employee privacy notice.
+
 ### Risk classes
 
 Each AI use case is classified by the likely impact if it fails (data exposure, incorrect output reaching customers, regulatory issue, operational disruption):
@@ -152,7 +166,7 @@ Each AI use case is classified by the likely impact if it fails (data exposure, 
 ## 11. Exceptions
 
 - Exceptions are granted by the CTO/CISO in consultation with Legal. They are time-limited and documented.
-- Exceptions are recorded in an exceptions register (maintained by the Security and AI Architect) including justification, time period, risk assessment and compensating controls.
+- Exceptions are recorded in an exceptions register (maintained by the Security and AI Architect) including justification, time period, risk assessment and compensating controls. The same register records administrator access to employee usage data under §7.
 - **In particular:** any proposal to train or fine-tune a model on Sensative or customer data is treated as a high-risk exception, requires a DPIA, written CTO/CISO and Legal approval, and is reported to the CEO.
 
 ---
@@ -166,5 +180,7 @@ Before pasting anything into an AI service, ask yourself:
 3. Would I be comfortable if a customer saw this exchange?
 4. Have I reviewed what I intend to use from the AI?
 5. Who is accountable for the final result? (Answer: I am.)
+
+Note that company AI accounts are company systems: an administrator can access your conversations and files, but only on the grounds and under the approval and logging rules in §7. Judge accordingly what you put into them.
 
 When in doubt, ask your manager or the Security and AI Architect.
