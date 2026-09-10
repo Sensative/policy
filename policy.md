@@ -45,8 +45,8 @@ This policy applies to both the use of external AI services and the integration 
 
 ## 5. Data classification
 
-- **C4 – Strictly confidential:** Customer data, personal data of customers or other external data subjects (in particular GDPR Art. 9 categories), security keys, API keys and authentication tokens, IoT telemetry attributable to an end customer, and sensor firmware source code. Must never be shared with, or used for training by, an external provider. *Internal personal data (employee names, work email, calendar entries, internal HR communications) is handled under normal confidentiality practice; it does not automatically fall into C4 but must not be used outside approved tools or shared with parties that lack an appropriate basis under GDPR.*
-- **C3 – Confidential:** Internal business information, unpublished product code, architecture descriptions, commercial terms. Permitted only in approved tools under contracts that guarantee data is not used for training.
+- **C4 – Strictly confidential:** Customer data, personal data of customers or other external data subjects (in particular GDPR Art. 9 categories), security keys, API keys and authentication tokens, and IoT telemetry attributable to an end customer. Must never be shared with, or used for training by, an external provider. *Internal personal data (employee names, work email, calendar entries, internal HR communications) is handled under normal confidentiality practice; it does not automatically fall into C4 but must not be used outside approved tools or shared with parties that lack an appropriate basis under GDPR.*
+- **C3 – Confidential:** Internal business information, unpublished product code (including sensor firmware source), architecture descriptions, commercial terms. Permitted only in approved tools under contracts that guarantee data is not used for training.
 - **C2 – Internal:** General internal information, documentation, generic code and configuration without secrets. May be used in approved tools.
 - **C1 – Public:** Material intended for publication. Free to use.
 
@@ -58,7 +58,7 @@ This policy applies to both the use of external AI services and the integration 
 - Summarization and analysis of public or C2 documents.
 - Research and prototyping using synthetic or anonymized data.
 - Reviewing public documentation and standards (e.g. LwM2M, MQTT, BLE, NB-IoT).
-- Generating example code and debugging assistance for embedded toolchains, provided that internal firmware code is not shared.
+- Firmware and embedded development in approved tools at C3 level: writing, reviewing, refactoring and debugging internal firmware source, and generating example code for embedded toolchains.
 - Building RAG and prompt-based features on top of approved vendor models, where the vendor model itself is not modified.
 
 ### Prohibited
